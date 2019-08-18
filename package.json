@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=gateway:*,node ./bin/www"
+    "start": "DEBUG=gateway:*,node ./bin/www.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

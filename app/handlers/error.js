@@ -4,6 +4,7 @@ let ErrorHandler = {};
 ErrorHandler.message = {
 
     "INTERNAL_SERVER_ERROR": JSON.stringify({ "code": 500, "message": "Internal Server Error" }),
+    "NOT_FOUND": JSON.stringify({ "code": 404, "message": "Not Found" }),
 }
 
 

@@ -25,7 +25,16 @@ Index.process = async function(req,res){
 
     try{
 
-        let processResponse = await IndexModule.process();
+        let data = {
+
+            'time': Date.now(),
+            'method': req['method'],
+            'headers': req['headers'],
+            'query': req['query'],
+            'body': req['body'],
+            'path': req['_parsedUrl']['pathname']     
+        }
+        let processResponse = await IndexModule.process(data);
         SuccessHandler.sendResponse(res,processResponse.type,processResponse.data);
 
     }   

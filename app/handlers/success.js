@@ -8,7 +8,8 @@ let Success = {};
  */
 Success.messages = {
 
-    STATS: { 'msg': 'stats', 'code': 200 }
+    STATS: { 'msg': 'stats', 'code': 200 },
+    PROCESS: {'msg': 'processed', 'code': 200}
 };
 
 /**
@@ -26,7 +27,7 @@ Success.sendResponse = (res,type, datas) => {
     let successData = {
 
         'success': true,
-        'message': successType.message,
+        'message': successType.msg,
         'data': datas,
         'status': {
             'code': successType.code,
